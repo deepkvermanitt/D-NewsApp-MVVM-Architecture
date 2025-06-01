@@ -1,4 +1,4 @@
-package com.deepkverma.d_newsapp_mvvm_architecture
+package com.deepkverma.d_newsapp_mvvm_architecture.ui.topheadline
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -13,7 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.deepkverma.d_newsapp_mvvm_architecture.ui.theme.DNewsAppMVVMArchitectureTheme
 
-class MainActivity : ComponentActivity() {
+class TopHeadlineActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
