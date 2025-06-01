@@ -24,6 +24,7 @@ import com.deepkverma.d_newsapp_mvvm_architecture.di.module.ApplicationModule
 import com.deepkverma.d_newsapp_mvvm_architecture.ui.UiState
 import com.deepkverma.d_newsapp_mvvm_architecture.ui.ViewModelProviderFactory
 import com.deepkverma.d_newsapp_mvvm_architecture.ui.theme.DNewsAppMVVMArchitectureTheme
+import com.deepkverma.feature_welcome.ui.WelcomeScreen
 import javax.inject.Inject
 
 class TopHeadlineActivity : ComponentActivity() {
@@ -52,6 +53,7 @@ class TopHeadlineActivity : ComponentActivity() {
             val uiState by viewModel.uiState.collectAsState()
 
             DNewsAppMVVMArchitectureTheme {
+
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     when (uiState) {
                         is UiState.Loading -> CircularProgressIndicator()

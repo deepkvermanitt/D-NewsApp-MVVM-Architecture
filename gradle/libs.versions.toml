@@ -13,6 +13,8 @@ glide="4.16.0"
 retrofit="3.0.0"
 dagger="2.56.2"
 browser="1.8.0"
+appcompat = "1.7.0"
+material = "1.12.0"
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -35,8 +37,11 @@ squareup-gson-conerter={group="com.squareup.retrofit2",name="converter-gson",ver
 google-dagger={group="com.google.dagger",name="dagger",version.ref="dagger"}
 google-dagger-compiler={group="com.google.dagger",name="dagger-compiler",version.ref="dagger"}
 androidx-browser={group="androidx.browser",name="browser",version.ref="browser"}
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+android-library = { id = "com.android.library", version.ref = "agp" }
 
