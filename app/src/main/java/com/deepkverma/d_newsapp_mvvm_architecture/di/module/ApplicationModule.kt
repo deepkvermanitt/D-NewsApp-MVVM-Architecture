@@ -3,6 +3,7 @@ package com.deepkverma.d_newsapp_mvvm_architecture.di.module
 import android.app.Application
 import com.NewsApplication
 import com.deepkverma.d_newsapp_mvvm_architecture.data.api.NetworkService
+import com.deepkverma.d_newsapp_mvvm_architecture.data.repository.TopHeadlineRepository
 import com.deepkverma.d_newsapp_mvvm_architecture.di.ApplicationContext
 import com.deepkverma.d_newsapp_mvvm_architecture.di.BaseUrl
 import com.deepkverma.d_newsapp_mvvm_architecture.utils.AppConstant.BASE_URL
@@ -41,4 +42,5 @@ class ApplicationModule(private val application: NewsApplication) {
                 NetworkService::class.java
             )
     }
+
 }
