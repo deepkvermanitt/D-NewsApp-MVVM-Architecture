@@ -11,4 +11,5 @@ interface ApplicationComponent {
 
     fun inject(application: NewsApplication)
 
+
 }
