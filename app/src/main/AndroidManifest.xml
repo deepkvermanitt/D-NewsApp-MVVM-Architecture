@@ -26,6 +26,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.topheadline.TopHeadlineActivity" />
+        <activity android:name="com.deepkverma.feature_welcome.ui.WelcomScreen" />
 
     </application>
 

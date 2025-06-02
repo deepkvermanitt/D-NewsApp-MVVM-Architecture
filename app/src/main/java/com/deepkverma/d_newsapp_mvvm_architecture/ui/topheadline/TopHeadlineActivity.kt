@@ -5,7 +5,6 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -18,13 +17,10 @@ import androidx.lifecycle.ViewModelProvider
 import com.NewsApplication
 import com.deepkverma.d_newsapp_mvvm_architecture.data.repository.TopHeadlineRepository
 import com.deepkverma.d_newsapp_mvvm_architecture.di.component.DaggerActivityComponent
-import com.deepkverma.d_newsapp_mvvm_architecture.di.component.DaggerApplicationComponent
 import com.deepkverma.d_newsapp_mvvm_architecture.di.module.ActivityModule
-import com.deepkverma.d_newsapp_mvvm_architecture.di.module.ApplicationModule
 import com.deepkverma.d_newsapp_mvvm_architecture.ui.UiState
 import com.deepkverma.d_newsapp_mvvm_architecture.ui.ViewModelProviderFactory
 import com.deepkverma.d_newsapp_mvvm_architecture.ui.theme.DNewsAppMVVMArchitectureTheme
-import com.deepkverma.feature_welcome.ui.WelcomeScreen
 import javax.inject.Inject
 
 class TopHeadlineActivity : ComponentActivity() {

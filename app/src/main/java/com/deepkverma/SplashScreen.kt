@@ -19,12 +19,10 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.scale
-import androidx.compose.ui.layout.Layout
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
-import com.deepkverma.d_newsapp_mvvm_architecture.ui.topheadline.TopHeadlineActivity
-import com.deepkverma.feature_welcome.ui.WelcomeScreen
+import com.deepkverma.feature_welcome.ui.WelcomScreen
 import kotlinx.coroutines.delay
 
 class SplashScreen : ComponentActivity() {
@@ -53,7 +51,7 @@ class SplashScreen : ComponentActivity() {
                 )
             )
             delay(1000) // splash delay total ~2 seconds
-            context.startActivity(Intent(context, TopHeadlineActivity::class.java))
+            context.startActivity(Intent(context, WelcomScreen::class.java))
         }
         Box(
             contentAlignment = Alignment.Center,
