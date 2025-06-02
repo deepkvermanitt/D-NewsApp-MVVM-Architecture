@@ -22,3 +22,4 @@ dependencyResolutionManagement {
 rootProject.name = "D-NewsApp-MVVM-Architecture"
 include(":app")
 include(":feature-welcome")
+include(":feature-topheadline")
