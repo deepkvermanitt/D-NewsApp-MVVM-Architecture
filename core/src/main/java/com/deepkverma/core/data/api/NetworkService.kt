@@ -1,7 +1,7 @@
-package com.deepkverma.d_newsapp_mvvm_architecture.data.api
+package com.deepkverma.core.data.api
 
-import com.deepkverma.d_newsapp_mvvm_architecture.data.model.TopHeadlinesResponse
-import com.deepkverma.d_newsapp_mvvm_architecture.utils.AppConstant.API_KEY
+import com.deepkverma.core.data.model.TopHeadlinesResponse
+import com.deepkverma.core.utils.WelcomeOptions.API_KEY
 import retrofit2.http.GET
 import retrofit2.http.Headers
 import retrofit2.http.Query

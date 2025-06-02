@@ -63,6 +63,7 @@ dependencies {
     kapt(libs.google.dagger.compiler)
     implementation(libs.androidx.browser)
     implementation(project(":feature-welcome"))
+    implementation(project(":core"))
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

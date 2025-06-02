@@ -2,17 +2,14 @@ package com.deepkverma.d_newsapp_mvvm_architecture.di.module
 
 import android.app.Application
 import com.NewsApplication
-import com.deepkverma.d_newsapp_mvvm_architecture.data.api.NetworkService
-import com.deepkverma.d_newsapp_mvvm_architecture.data.repository.TopHeadlineRepository
+import com.deepkverma.core.data.api.NetworkService
+import com.deepkverma.core.utils.WelcomeOptions.BASE_URL
 import com.deepkverma.d_newsapp_mvvm_architecture.di.ApplicationContext
 import com.deepkverma.d_newsapp_mvvm_architecture.di.BaseUrl
-import com.deepkverma.d_newsapp_mvvm_architecture.utils.AppConstant.BASE_URL
 import dagger.Module
 import dagger.Provides
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.create
-import javax.inject.Qualifier
 import javax.inject.Singleton
 
 @Module

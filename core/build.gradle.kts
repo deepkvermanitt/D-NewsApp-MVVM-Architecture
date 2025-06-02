@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
+    id("kotlin-kapt")
 }
 
 android {
@@ -38,7 +39,10 @@ dependencies {
     implementation(libs.squareup.retrofit2)
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.kotlinx.coroutines.core)
-
+    implementation(libs.squareup.retrofit2)
+    implementation(libs.squareup.gson.conerter)
+    implementation(libs.google.dagger)
+    kapt(libs.google.dagger.compiler)
 //    implementation(libs.androidx.appcompat)
 //    implementation(libs.material)
     testImplementation(libs.junit)

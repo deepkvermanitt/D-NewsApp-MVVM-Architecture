@@ -15,7 +15,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.ViewModelProvider
 import com.NewsApplication
-import com.deepkverma.d_newsapp_mvvm_architecture.data.repository.TopHeadlineRepository
+import com.deepkverma.core.data.repository.TopHeadlineRepository
 import com.deepkverma.d_newsapp_mvvm_architecture.di.component.DaggerActivityComponent
 import com.deepkverma.d_newsapp_mvvm_architecture.di.module.ActivityModule
 import com.deepkverma.d_newsapp_mvvm_architecture.ui.UiState

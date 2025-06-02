@@ -1,4 +1,4 @@
-package com.deepkverma.d_newsapp_mvvm_architecture.data.model
+package com.deepkverma.core.data.model
 
 import com.google.gson.annotations.SerializedName
 
