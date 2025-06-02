@@ -22,6 +22,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.deepkverma.core.utils.WelcomeOptions
 
 @Composable
 fun WelcomeCompose() {
@@ -50,13 +51,7 @@ fun WelcomeCompose() {
             verticalArrangement = Arrangement.spacedBy(16.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            listOf(
-                "Top Headlines",
-                "News Sources",
-                "Countries",
-                "Languages",
-                "Search"
-            ).forEach { label ->
+            WelcomeOptions.options.forEach { label ->
                 Button(
                     onClick = {
 
