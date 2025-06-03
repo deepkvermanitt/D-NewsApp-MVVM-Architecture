@@ -2,7 +2,7 @@ package com.deepkverma.d_newsapp_mvvm_architecture.di.module
 
 import androidx.activity.ComponentActivity
 import com.deepkverma.d_newsapp_mvvm_architecture.ui.topheadline.TopHeadlineActivity
-import com.deepkverma.d_newsapp_mvvm_architecture.di.ActivityContext
+import com.deepkverma.core.di.ActivityContext
 import dagger.Module
 import dagger.Provides
 

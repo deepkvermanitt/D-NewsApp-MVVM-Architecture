@@ -1,4 +1,4 @@
-package com.deepkverma.d_newsapp_mvvm_architecture.di
+package com.deepkverma.core.di
 
 import javax.inject.Scope
 

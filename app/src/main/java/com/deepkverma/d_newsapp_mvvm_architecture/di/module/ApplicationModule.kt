@@ -1,11 +1,10 @@
 package com.deepkverma.d_newsapp_mvvm_architecture.di.module
 
-import android.app.Application
 import com.NewsApplication
 import com.deepkverma.core.data.api.NetworkService
 import com.deepkverma.core.utils.WelcomeOptions.BASE_URL
-import com.deepkverma.d_newsapp_mvvm_architecture.di.ApplicationContext
-import com.deepkverma.d_newsapp_mvvm_architecture.di.BaseUrl
+import com.deepkverma.core.di.ApplicationContext
+import com.deepkverma.core.di.BaseUrl
 import dagger.Module
 import dagger.Provides
 import retrofit2.Retrofit
