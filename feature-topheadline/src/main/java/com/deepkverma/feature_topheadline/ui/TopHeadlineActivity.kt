@@ -1,4 +1,4 @@
-package com.deepkverma.d_newsapp_mvvm_architecture.ui.topheadline
+package com.deepkverma.feature_topheadline.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -14,13 +14,11 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.ViewModelProvider
-import com.NewsApplication
 import com.deepkverma.core.data.repository.TopHeadlineRepository
-import com.deepkverma.d_newsapp_mvvm_architecture.di.component.DaggerActivityComponent
-import com.deepkverma.d_newsapp_mvvm_architecture.di.module.ActivityModule
-import com.deepkverma.d_newsapp_mvvm_architecture.ui.UiState
-import com.deepkverma.d_newsapp_mvvm_architecture.ui.ViewModelProviderFactory
-import com.deepkverma.d_newsapp_mvvm_architecture.ui.theme.DNewsAppMVVMArchitectureTheme
+import com.deepkverma.core.utils.AppGraph
+import com.deepkverma.feature_topheadline.di.component.DaggerActivityComponent
+import com.deepkverma.feature_topheadline.di.module.ActivityModule
+import com.deepkverma.feature_topheadline.ui.theme.DNewsAppMVVMArchitectureTheme
 import javax.inject.Inject
 
 class TopHeadlineActivity : ComponentActivity() {
@@ -32,9 +30,9 @@ class TopHeadlineActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        val appGraph by lazy { application as AppGraph }
         val activityComponent = DaggerActivityComponent.builder()
-            .applicationComponent((applicationContext as NewsApplication).applicationComponent)
+            .applicationComponent(appGraph.applicationComponent)
             .activityModule(ActivityModule(this))
             .build()
 

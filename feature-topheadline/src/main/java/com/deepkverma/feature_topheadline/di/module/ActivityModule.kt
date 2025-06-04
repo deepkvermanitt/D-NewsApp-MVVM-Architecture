@@ -1,8 +1,8 @@
-package com.deepkverma.d_newsapp_mvvm_architecture.di.module
+package com.deepkverma.feature_topheadline.di.module
 
 import androidx.activity.ComponentActivity
-import com.deepkverma.d_newsapp_mvvm_architecture.ui.topheadline.TopHeadlineActivity
 import com.deepkverma.core.di.ActivityContext
+import com.deepkverma.feature_topheadline.ui.TopHeadlineActivity
 import dagger.Module
 import dagger.Provides
 

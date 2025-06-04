@@ -2,7 +2,9 @@ plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    id("kotlin-kapt")
 }
+
 
 android {
     namespace = "com.deepkverma.feature_topheadline"
@@ -48,6 +50,9 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
     implementation(libs.androidx.runtime.android)
+    implementation(libs.google.dagger)
+    kapt(libs.google.dagger.compiler)
+    implementation(project(":core"))
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

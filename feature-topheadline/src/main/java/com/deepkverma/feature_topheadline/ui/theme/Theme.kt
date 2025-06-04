@@ -1,6 +1,5 @@
-package com.deepkverma.d_newsapp_mvvm_architecture.ui.theme
+package com.deepkverma.feature_topheadline.ui.theme
 
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme

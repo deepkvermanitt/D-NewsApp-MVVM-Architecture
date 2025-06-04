@@ -1,11 +1,10 @@
-package com.deepkverma.d_newsapp_mvvm_architecture.ui.topheadline
+package com.deepkverma.feature_topheadline.ui
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.deepkverma.core.data.model.Article
 import com.deepkverma.core.data.repository.TopHeadlineRepository
 import com.deepkverma.core.utils.WelcomeOptions.COUNTRY
-import com.deepkverma.d_newsapp_mvvm_architecture.ui.UiState
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.catch

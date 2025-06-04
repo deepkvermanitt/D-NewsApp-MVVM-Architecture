@@ -1,4 +1,4 @@
-package com.deepkverma.d_newsapp_mvvm_architecture.ui
+package com.deepkverma.feature_topheadline.ui
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
