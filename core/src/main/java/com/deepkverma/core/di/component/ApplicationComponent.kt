@@ -1,8 +1,8 @@
-package com.deepkverma.d_newsapp_mvvm_architecture.di.component
+package com.deepkverma.core.di.component
 
-import com.NewsApplication
+import android.app.Application
 import com.deepkverma.core.data.repository.TopHeadlineRepository
-import com.deepkverma.d_newsapp_mvvm_architecture.di.module.ApplicationModule
+import com.deepkverma.core.di.module.ApplicationModule
 import dagger.Component
 import javax.inject.Singleton
 
@@ -10,7 +10,7 @@ import javax.inject.Singleton
 @Component(modules = [ApplicationModule::class])
 interface ApplicationComponent {
 
-    fun inject(application: NewsApplication)
+    fun inject(application: Application)
 
     fun getRepository(): TopHeadlineRepository
 
