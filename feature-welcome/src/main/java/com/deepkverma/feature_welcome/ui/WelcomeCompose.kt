@@ -22,6 +22,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.deepkverma.core.utils.WelcomeOption
+import com.deepkverma.feature_topheadline.ui.TopHeadlineActivity
 
 @Composable
 fun WelcomeCompose() {
@@ -93,6 +94,7 @@ fun navigateToCountries(context: Context) {
 }
 
 fun navigateToTopHeadline(context: Context) {
+    TopHeadlineActivity.launchTopLineActivity(context)
     Toast.makeText(context, "navigateToTopHeadline", Toast.LENGTH_SHORT).show()
 }
 

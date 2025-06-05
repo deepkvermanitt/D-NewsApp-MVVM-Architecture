@@ -1,5 +1,7 @@
 package com.deepkverma.feature_topheadline.ui
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -12,7 +14,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.core.content.ContextCompat.startActivity
 import androidx.lifecycle.ViewModelProvider
 import com.deepkverma.core.data.repository.TopHeadlineRepository
 import com.deepkverma.core.utils.AppGraph
@@ -23,6 +27,15 @@ import javax.inject.Inject
 
 class TopHeadlineActivity : ComponentActivity() {
 
+    companion object {
+
+        fun launchTopLineActivity(context: Context) {
+            val intent = Intent(context, TopHeadlineActivity::class.java)
+            context.startActivity(intent)
+        }
+    }
+
+
     @Inject
     lateinit var repository: TopHeadlineRepository
 
@@ -30,6 +43,7 @@ class TopHeadlineActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         val appGraph by lazy { application as AppGraph }
         val activityComponent = DaggerActivityComponent.builder()
             .applicationComponent(appGraph.applicationComponent)
