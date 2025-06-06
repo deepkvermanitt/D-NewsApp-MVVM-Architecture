@@ -18,6 +18,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.ViewModelProvider
 import com.deepkverma.core.data.repository.TopHeadlineRepository
 import com.deepkverma.core.utils.AppGraph
+import com.deepkverma.domain.usecase.GetTopHeadlinesUseCase
 import com.deepkverma.feature_topheadline.di.component.DaggerActivityComponent
 import com.deepkverma.feature_topheadline.di.module.ActivityModule
 import com.deepkverma.feature_topheadline.ui.theme.DNewsAppMVVMArchitectureTheme
@@ -38,7 +39,7 @@ class TopHeadlineActivity : ComponentActivity() {
 
 
     @Inject
-    lateinit var repository: TopHeadlineRepository
+    lateinit var getTopHeadlinesUseCase: GetTopHeadlinesUseCase
 
     private lateinit var viewModel: TopHeadlineViewModel
 
@@ -53,7 +54,7 @@ class TopHeadlineActivity : ComponentActivity() {
 
         activityComponent.inject(this)
         val factory = ViewModelProviderFactory(TopHeadlineViewModel::class) {
-            TopHeadlineViewModel(repository)
+            TopHeadlineViewModel(getTopHeadlinesUseCase)
         }
         viewModel = ViewModelProvider(this, factory)[TopHeadlineViewModel::class.java]
 //TopHeadlineListScreen((uiState as UiState.Success).data)
@@ -68,9 +69,7 @@ class TopHeadlineActivity : ComponentActivity() {
                         is UiState.Loading -> CircularProgressIndicator()
                         is UiState.Success -> Text(
                             "Success: ${
-                                (uiState as UiState.Success).data.get(
-                                    0
-                                )
+                                (uiState as UiState.Success).data
                             }"
                         )
 

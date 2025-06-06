@@ -8,4 +8,7 @@ data class Article(
     private val urlToImage: String,
     private val source: Source,
 
-    )
+    ){
+
+}
+

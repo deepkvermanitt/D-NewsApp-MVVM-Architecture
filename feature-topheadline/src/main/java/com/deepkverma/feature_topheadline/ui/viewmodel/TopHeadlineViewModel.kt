@@ -5,14 +5,20 @@ import androidx.lifecycle.viewModelScope
 import com.deepkverma.core.data.model.ArticleDto
 import com.deepkverma.core.data.repository.TopHeadlineRepository
 import com.deepkverma.core.utils.WelcomeOptions.COUNTRY
+import com.deepkverma.domain.model.Article
+import com.deepkverma.domain.usecase.GetTopHeadlinesUseCase
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class TopHeadlineViewModel(private val topHeadlineRepository: TopHeadlineRepository) : ViewModel() {
-    private val _uiState = MutableStateFlow<UiState<List<ArticleDto>>>(UiState.Loading)
-    val uiState: StateFlow<UiState<List<ArticleDto>>> = _uiState
+class TopHeadlineViewModel @Inject constructor(
+    private val getTopHeadlinesUseCase: GetTopHeadlinesUseCase
+) : ViewModel() {
+
+    private val _uiState = MutableStateFlow<UiState<List<Article>>>(UiState.Loading)
+    val uiState: StateFlow<UiState<List<Article>>> = _uiState
 
     init {
         fetchTopHeadlines()
@@ -20,14 +26,9 @@ class TopHeadlineViewModel(private val topHeadlineRepository: TopHeadlineReposit
 
     private fun fetchTopHeadlines() {
         viewModelScope.launch {
-            topHeadlineRepository.getTopHeadlines(COUNTRY).catch {
-
-                _uiState.value = UiState.Error(it.message.toString())
-            }
-                .collect {
-                    _uiState.value = UiState.Success(it)
-                }
+            getTopHeadlinesUseCase("US") // country passed here
+                .catch { _uiState.value = UiState.Error(it.message.orEmpty()) }
+                .collect { articles -> _uiState.value = UiState.Success(articles) }
         }
-
     }
 }

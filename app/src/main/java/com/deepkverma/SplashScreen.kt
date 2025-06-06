@@ -51,7 +51,7 @@ class SplashScreen : ComponentActivity() {
                 )
             )
             delay(1000) // splash delay total ~2 seconds
-            context.startActivity(Intent(context, WelcomScreen::class.java))
+            WelcomScreen.launchWelCome(context)
         }
         Box(
             contentAlignment = Alignment.Center,

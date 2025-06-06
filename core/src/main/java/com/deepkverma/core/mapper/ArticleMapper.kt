@@ -1,15 +1,10 @@
-package com.deepkverma.core.data.model
+package com.deepkverma.core.mapper
 
-import com.deepkverma.core.mapper.toDomain
+import com.deepkverma.core.data.model.ArticleDto
+import com.deepkverma.core.data.model.SourceDto
 import com.deepkverma.domain.model.Article
+import com.deepkverma.domain.model.Source
 
-data class ArticleDto(
-    val title: String,
-    val description: String,
-    val url: String,
-    val urlToImage: String,
-    val source: SourceDto,
-)
 fun ArticleDto.toDomain(): Article {
     return Article(
         title = this.title.orEmpty(),
@@ -17,5 +12,11 @@ fun ArticleDto.toDomain(): Article {
         source = this.source.toDomain(),
         url = this.url.orEmpty(),
         urlToImage = this.urlToImage.orEmpty(),
+    )
+}
+
+fun SourceDto.toDomain(): Source {
+    return Source(
+        name = this.name.orEmpty()
     )
 }

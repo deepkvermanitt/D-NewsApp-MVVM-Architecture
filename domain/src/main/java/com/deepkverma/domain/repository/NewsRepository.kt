@@ -4,5 +4,5 @@ import com.deepkverma.domain.model.Article
 import kotlinx.coroutines.flow.Flow
 
 interface NewsRepository {
-    fun getTopHeadLine(): Flow<List<Article>>
+    fun getTopHeadlines(country: String): Flow<List<Article>>
 }
