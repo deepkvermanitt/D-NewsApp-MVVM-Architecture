@@ -44,6 +44,7 @@ dependencies {
     implementation(libs.google.dagger)
     kapt(libs.google.dagger.compiler)
     implementation(project(":domain"))
+    implementation(libs.ktx.io.coil)
 
 //    implementation(libs.androidx.appcompat)
 //    implementation(libs.material)

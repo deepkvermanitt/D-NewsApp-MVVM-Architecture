@@ -14,8 +14,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.ViewModelProvider
+import coil.ImageLoader
 import com.deepkverma.core.data.repository.TopHeadlineRepository
 import com.deepkverma.core.utils.AppGraph
 import com.deepkverma.domain.usecase.GetTopHeadlinesUseCase
@@ -36,12 +38,15 @@ class TopHeadlineActivity : ComponentActivity() {
             context.startActivity(intent)
         }
     }
-
+    @Inject
+    lateinit var imageLoader: ImageLoader
 
     @Inject
     lateinit var getTopHeadlinesUseCase: GetTopHeadlinesUseCase
 
     private lateinit var viewModel: TopHeadlineViewModel
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -60,7 +65,7 @@ class TopHeadlineActivity : ComponentActivity() {
 //TopHeadlineListScreen((uiState as UiState.Success).data)
         enableEdgeToEdge()
         setContent {
-            TopHeadlineScreen(viewModel)
+            TopHeadlineScreen(viewModel,imageLoader)
         }
     }
 }

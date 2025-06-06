@@ -1,5 +1,6 @@
 [versions]
 agp = "8.11.0-alpha07"
+browserVersion = "1.7.0"
 kotlin = "2.0.21"
 coreKtx = "1.16.0"
 junit = "4.13.2"
@@ -20,6 +21,7 @@ lifecycleViewModelKtx = "2.8.0"
 coroutinesCore = "1.8.0"
 coil = "2.7.0"
 [libraries]
+androidx-browser-v170 = { module = "androidx.browser:browser", version.ref = "browserVersion" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
