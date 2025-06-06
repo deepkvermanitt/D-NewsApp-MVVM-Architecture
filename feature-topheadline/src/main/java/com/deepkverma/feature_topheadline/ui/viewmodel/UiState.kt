@@ -1,4 +1,4 @@
-package com.deepkverma.feature_topheadline.ui
+package com.deepkverma.feature_topheadline.ui.viewmodel
 
 interface UiState<out T> {
     data class Success<T>(val data: T) : UiState<T>

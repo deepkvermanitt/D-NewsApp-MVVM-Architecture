@@ -52,7 +52,9 @@ dependencies {
     implementation(libs.androidx.runtime.android)
     implementation(libs.google.dagger)
     kapt(libs.google.dagger.compiler)
+    implementation(project(":domain"))
     implementation(project(":core"))
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

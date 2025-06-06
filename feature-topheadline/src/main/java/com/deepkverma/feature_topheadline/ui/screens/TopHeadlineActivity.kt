@@ -1,4 +1,4 @@
-package com.deepkverma.feature_topheadline.ui
+package com.deepkverma.feature_topheadline.ui.screens
 
 import android.content.Context
 import android.content.Intent
@@ -14,15 +14,16 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.core.content.ContextCompat.startActivity
 import androidx.lifecycle.ViewModelProvider
 import com.deepkverma.core.data.repository.TopHeadlineRepository
 import com.deepkverma.core.utils.AppGraph
 import com.deepkverma.feature_topheadline.di.component.DaggerActivityComponent
 import com.deepkverma.feature_topheadline.di.module.ActivityModule
 import com.deepkverma.feature_topheadline.ui.theme.DNewsAppMVVMArchitectureTheme
+import com.deepkverma.feature_topheadline.ui.viewmodel.TopHeadlineViewModel
+import com.deepkverma.feature_topheadline.ui.viewmodel.UiState
+import com.deepkverma.feature_topheadline.ui.viewmodel.ViewModelProviderFactory
 import javax.inject.Inject
 
 class TopHeadlineActivity : ComponentActivity() {

@@ -43,6 +43,8 @@ dependencies {
     implementation(libs.squareup.gson.conerter)
     implementation(libs.google.dagger)
     kapt(libs.google.dagger.compiler)
+    implementation(project(":domain"))
+
 //    implementation(libs.androidx.appcompat)
 //    implementation(libs.material)
     testImplementation(libs.junit)

@@ -5,6 +5,8 @@ import com.deepkverma.core.data.api.NetworkService
 import com.deepkverma.core.di.ApplicationContext
 import com.deepkverma.core.di.BaseUrl
 import com.deepkverma.core.utils.WelcomeOptions
+import com.deepkverma.domain.repository.NewsRepository
+import com.deepkverma.domain.usecase.GetTopHeadlinesUseCase
 import dagger.Module
 import dagger.Provides
 import retrofit2.Retrofit
@@ -39,4 +41,8 @@ class ApplicationModule(private val application: Application) {
             )
     }
 
+    @Provides
+    fun provideGetTopHeadlinesUseCase(repository: NewsRepository): GetTopHeadlinesUseCase {
+        return GetTopHeadlinesUseCase(repository)
+    }
 }

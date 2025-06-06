@@ -8,5 +8,5 @@ data class TopHeadlinesResponse(
     val status: String = EMPTY,
     @SerializedName("totalResults")
     val totalResults: Int = 0,
-    @SerializedName("articles") val articles: List<Article> = ArrayList<Article>()
+    @SerializedName("articles") val articles: List<ArticleDto> = ArrayList<ArticleDto>()
 )

@@ -3,7 +3,7 @@
 
 
     <application>
-        <activity android:name="com.deepkverma.feature_topheadline.ui.TopHeadlineActivity" />
+        <activity android:name="com.deepkverma.feature_topheadline.ui.screens.TopHeadlineActivity" />
 
     </application>
 

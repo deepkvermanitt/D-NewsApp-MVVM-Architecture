@@ -22,7 +22,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.deepkverma.core.utils.WelcomeOption
-import com.deepkverma.feature_topheadline.ui.TopHeadlineActivity
+import com.deepkverma.feature_topheadline.ui.screens.TopHeadlineActivity
 
 @Composable
 fun WelcomeCompose() {
