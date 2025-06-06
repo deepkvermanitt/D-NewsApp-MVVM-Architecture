@@ -60,30 +60,11 @@ class TopHeadlineActivity : ComponentActivity() {
 //TopHeadlineListScreen((uiState as UiState.Success).data)
         enableEdgeToEdge()
         setContent {
-            val uiState by viewModel.uiState.collectAsState()
-
-            DNewsAppMVVMArchitectureTheme {
-
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    when (uiState) {
-                        is UiState.Loading -> CircularProgressIndicator()
-                        is UiState.Success -> Text(
-                            "Success: ${
-                                (uiState as UiState.Success).data
-                            }"
-                        )
-
-                        is UiState.Error -> Text("Error: ${(uiState as UiState.Error).message}")
-                    }
-                }
-            }
+            TopHeadlineScreen(viewModel)
         }
     }
-
-    fun getDependency() {
-
-    }
 }
+
 
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {

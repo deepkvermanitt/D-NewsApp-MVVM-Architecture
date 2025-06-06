@@ -24,7 +24,7 @@ class TopHeadlineViewModel @Inject constructor(
         fetchTopHeadlines()
     }
 
-    private fun fetchTopHeadlines() {
+    fun fetchTopHeadlines() {
         viewModelScope.launch {
             getTopHeadlinesUseCase("US") // country passed here
                 .catch { _uiState.value = UiState.Error(it.message.orEmpty()) }
