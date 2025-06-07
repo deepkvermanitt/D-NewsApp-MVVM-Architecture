@@ -58,7 +58,10 @@ fun SearchScreen(
         OutlinedTextField(
 
             value = query,
-            onValueChange = { query = it },
+            onValueChange = {
+                query = it
+                searchViewModel.updateQuery(query)
+            },
             modifier = Modifier.fillMaxWidth(),
             label = { Text(text = "Search News Article") },
             singleLine = true
