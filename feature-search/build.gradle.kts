@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.kotlin.compose)
+
     id("kotlin-kapt")
 
 }
@@ -45,13 +47,15 @@ dependencies {
     implementation(libs.ktx.io.coil)
     implementation(libs.androidx.browser.v170)
     kapt(libs.google.dagger.compiler)
-    implementation(project(":domain"))
-    implementation(project(":core"))
+
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
     implementation(libs.androidx.runtime.android)
     implementation(libs.google.dagger)
+    implementation(project(":domain"))
+    implementation(project(":core"))
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
