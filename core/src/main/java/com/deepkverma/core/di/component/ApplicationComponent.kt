@@ -3,7 +3,6 @@ package com.deepkverma.core.di.component
 import android.app.Application
 import android.content.Context
 import coil.ImageLoader
-import com.deepkverma.core.data.repository.TopHeadlineRepository
 import com.deepkverma.core.di.ApplicationContext
 import com.deepkverma.core.di.module.ApplicationModule
 import com.deepkverma.core.di.module.RepositoryModule

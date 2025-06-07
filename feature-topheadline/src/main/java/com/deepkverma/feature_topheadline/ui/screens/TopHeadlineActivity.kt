@@ -6,26 +6,18 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.ViewModelProvider
 import coil.ImageLoader
-import com.deepkverma.core.data.repository.TopHeadlineRepository
 import com.deepkverma.core.utils.AppGraph
 import com.deepkverma.domain.usecase.GetTopHeadlinesUseCase
 import com.deepkverma.feature_topheadline.di.component.DaggerActivityComponent
 import com.deepkverma.feature_topheadline.di.module.ActivityModule
 import com.deepkverma.feature_topheadline.ui.theme.DNewsAppMVVMArchitectureTheme
 import com.deepkverma.feature_topheadline.ui.viewmodel.TopHeadlineViewModel
-import com.deepkverma.core.viewmodel.UiState
 import com.deepkverma.core.viewmodel.ViewModelProviderFactory
 import javax.inject.Inject
 

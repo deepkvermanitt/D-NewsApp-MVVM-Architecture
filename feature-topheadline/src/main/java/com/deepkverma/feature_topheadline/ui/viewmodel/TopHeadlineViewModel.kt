@@ -2,9 +2,6 @@ package com.deepkverma.feature_topheadline.ui.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.deepkverma.core.data.model.ArticleDto
-import com.deepkverma.core.data.repository.TopHeadlineRepository
-import com.deepkverma.core.utils.WelcomeOptions.COUNTRY
 import com.deepkverma.core.viewmodel.UiState
 import com.deepkverma.domain.model.Article
 import com.deepkverma.domain.usecase.GetTopHeadlinesUseCase
