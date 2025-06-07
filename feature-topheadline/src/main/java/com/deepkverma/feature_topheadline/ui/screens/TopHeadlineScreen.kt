@@ -33,7 +33,7 @@ import coil.memory.MemoryCache
 import coil.request.ImageRequest
 import com.deepkverma.domain.model.Article
 import com.deepkverma.feature_topheadline.ui.viewmodel.TopHeadlineViewModel
-import com.deepkverma.feature_topheadline.ui.viewmodel.UiState
+import com.deepkverma.core.viewmodel.UiState
 import com.deepkverma.feature_topheadline.R
 import java.io.File
 import javax.inject.Inject

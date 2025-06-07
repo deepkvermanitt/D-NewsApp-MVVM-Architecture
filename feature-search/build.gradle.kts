@@ -45,7 +45,8 @@ dependencies {
     implementation(libs.ktx.io.coil)
     implementation(libs.androidx.browser.v170)
     kapt(libs.google.dagger.compiler)
-
+    implementation(project(":domain"))
+    implementation(project(":core"))
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
