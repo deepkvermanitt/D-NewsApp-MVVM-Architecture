@@ -23,6 +23,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.deepkverma.core.utils.WelcomeOption
 import com.deepkverma.feature_topheadline.ui.screens.TopHeadlineActivity
+import com.deepkverma.search.ui.SearchActivity
 
 @Composable
 fun WelcomeCompose() {
@@ -86,6 +87,7 @@ fun navigateToNewsSources(context: Context) {
 }
 
 fun navigateToSearch(context: Context) {
+    SearchActivity.launchSearch(context)
     Toast.makeText(context, "navigateToSearch", Toast.LENGTH_SHORT).show()
 }
 

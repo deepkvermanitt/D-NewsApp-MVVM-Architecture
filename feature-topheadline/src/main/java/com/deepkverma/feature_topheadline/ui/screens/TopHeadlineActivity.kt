@@ -26,7 +26,7 @@ import com.deepkverma.feature_topheadline.di.module.ActivityModule
 import com.deepkverma.feature_topheadline.ui.theme.DNewsAppMVVMArchitectureTheme
 import com.deepkverma.feature_topheadline.ui.viewmodel.TopHeadlineViewModel
 import com.deepkverma.feature_topheadline.ui.viewmodel.UiState
-import com.deepkverma.feature_topheadline.ui.viewmodel.ViewModelProviderFactory
+import com.deepkverma.core.viewmodel.ViewModelProviderFactory
 import javax.inject.Inject
 
 class TopHeadlineActivity : ComponentActivity() {

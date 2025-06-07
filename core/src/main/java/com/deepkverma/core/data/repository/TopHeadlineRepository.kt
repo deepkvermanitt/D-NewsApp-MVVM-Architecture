@@ -26,4 +26,14 @@ class TopHeadlineRepository @Inject constructor(private val networkService: Netw
 
     }
 
+    override fun searchNews(query: String): Flow<List<Article>> {
+        return flow {
+            emit(networkService.searchNews(query))
+        }.map { response ->
+            response.articles.map { article ->
+                article.toDomain()
+            }
+        }
+    }
+
 }

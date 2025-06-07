@@ -1,4 +1,4 @@
-package com.deepkverma.feature_topheadline.ui.viewmodel
+package com.deepkverma.core.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
