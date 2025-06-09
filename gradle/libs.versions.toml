@@ -20,7 +20,10 @@ runtimeAndroid = "1.8.2"
 lifecycleViewModelKtx = "2.8.0"
 coroutinesCore = "1.8.0"
 coil = "2.7.0"
+mockito = "5.18.0"
 [libraries]
+mockito-kotlin = { module = "org.mockito.kotlin:mockito-kotlin", version.ref = "mockito" }
+mockito-core = { module = "org.mockito:mockito-core", version.ref = "mockito" }
 androidx-browser-v170 = { module = "androidx.browser:browser", version.ref = "browserVersion" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
