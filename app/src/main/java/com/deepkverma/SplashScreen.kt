@@ -22,6 +22,8 @@ import androidx.compose.ui.draw.scale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.rememberNavController
 import com.deepkverma.feature_welcome.ui.WelcomScreen
 import kotlinx.coroutines.delay
 
@@ -31,6 +33,15 @@ class SplashScreen : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             SplashScreenContent()
+        }
+    }
+
+    @Composable
+    fun AppNavigation() {
+
+        val navController = rememberNavController()
+        NavHost(navController = navController, startDestination = NavRoutes.Splash.route) {
+           
         }
     }
 
@@ -63,7 +74,8 @@ class SplashScreen : ComponentActivity() {
                 painter = painterResource(id = android.R.drawable.star_on), // replace with your logo
                 contentDescription = "App Logo",
                 modifier = Modifier.Companion
-                    .size(128.dp).scale(scaleAnimation.value)
+                    .size(128.dp)
+                    .scale(scaleAnimation.value)
             )
         }
     }

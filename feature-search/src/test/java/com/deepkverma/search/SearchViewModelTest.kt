@@ -20,6 +20,7 @@ import kotlin.test.Test
 
 class SearchViewModelTest {
 
+
     private val testDispatcher = StandardTestDispatcher()
 
     @BeforeTest

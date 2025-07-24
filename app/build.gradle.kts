@@ -60,6 +60,7 @@ dependencies {
     implementation(libs.squareup.retrofit2)
     implementation(libs.squareup.gson.conerter)
     implementation(libs.google.dagger)
+    implementation(libs.androidx.navigation.compose.jvmstubs)
     kapt(libs.google.dagger.compiler)
     implementation(libs.androidx.browser)
     implementation(project(":feature-welcome"))
