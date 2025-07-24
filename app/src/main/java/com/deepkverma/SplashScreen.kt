@@ -1,6 +1,5 @@
 package com.deepkverma
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -22,28 +21,24 @@ import androidx.compose.ui.draw.scale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
+import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
 import com.deepkverma.feature_welcome.ui.WelcomScreen
 import kotlinx.coroutines.delay
 
-class SplashScreen : ComponentActivity() {
+class SplashScreen(private val navHostController: NavHostController) : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+
         setContent {
-            SplashScreenContent()
+            AppNavigation()
+
         }
     }
 
-    @Composable
-    fun AppNavigation() {
-
-        val navController = rememberNavController()
-        NavHost(navController = navController, startDestination = NavRoutes.Splash.route) {
-           
-        }
-    }
 
     @Composable
     fun SplashScreenContent() {
@@ -62,7 +57,10 @@ class SplashScreen : ComponentActivity() {
                 )
             )
             delay(1000) // splash delay total ~2 seconds
-            WelcomScreen.launchWelCome(context)
+            // WelcomScreen.launchWelCome(context)
+            navHostController.navigate(NavRoutes.Welcome.route) {
+                popUpTo(NavRoutes.Splash.route) { inclusive = true }
+            }
         }
         Box(
             contentAlignment = Alignment.Center,
