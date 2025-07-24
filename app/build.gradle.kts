@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.hilt.android)
     id("kotlin-kapt")
 }
 
@@ -59,8 +60,10 @@ dependencies {
     implementation(libs.bumptech.glide)
     implementation(libs.squareup.retrofit2)
     implementation(libs.squareup.gson.conerter)
-    implementation(libs.google.dagger)
-    kapt(libs.google.dagger.compiler)
+//    implementation(libs.google.dagger)
+//    kapt(libs.google.dagger.compiler)
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.compiler)
     implementation(libs.androidx.browser)
     implementation(project(":feature-welcome"))
     implementation(project(":feature-topheadline"))
