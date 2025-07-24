@@ -15,7 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DNewsAppMVVMArchitecture">
         <activity
-            android:name="com.deepkverma.SplashScreen"
+            android:name="com.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.DNewsAppMVVMArchitecture">
@@ -25,8 +25,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.deepkverma.feature_welcome.ui.WelcomScreen" />
-
     </application>
 
 </manifest>
