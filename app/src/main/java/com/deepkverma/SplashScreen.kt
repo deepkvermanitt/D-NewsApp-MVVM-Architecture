@@ -28,53 +28,28 @@ import androidx.navigation.compose.rememberNavController
 import com.deepkverma.feature_welcome.ui.WelcomScreen
 import kotlinx.coroutines.delay
 
-class SplashScreen(private val navHostController: NavHostController) : ComponentActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-
-        setContent {
-            AppNavigation()
-
-        }
+@Composable
+fun SplashScreen(navHostController: NavHostController) {
+    val scaleAnimation = remember { Animatable(0.8f) }
+    LaunchedEffect(true) {
+        scaleAnimation.animateTo(
+            targetValue = 1f,
+            animationSpec = tween(1000, easing = FastOutSlowInEasing)
+        )
+        delay(1000)
+    }
+    Box(
+        contentAlignment = Alignment.Center, modifier = Modifier
+            .fillMaxSize()
+            .padding(32.dp)
+    ) {
+        Image(
+            painter = painterResource(id = android.R.drawable.star_on),
+            contentDescription = "App Logo",
+            modifier = Modifier
+                .size(128.dp)
+                .scale(scaleAnimation.value)
+        )
     }
 
-
-    @Composable
-    fun SplashScreenContent() {
-        val context = LocalContext.current
-
-        val scaleAnimation = remember {
-            Animatable(0.8f)
-
-        }
-        LaunchedEffect(true) {
-            scaleAnimation.animateTo(
-                targetValue = 1f,
-                animationSpec = tween(
-                    durationMillis = 1000,
-                    easing = FastOutSlowInEasing
-                )
-            )
-            delay(1000) // splash delay total ~2 seconds
-            // WelcomScreen.launchWelCome(context)
-            navHostController.navigate(NavRoutes.Welcome.route) {
-                popUpTo(NavRoutes.Splash.route) { inclusive = true }
-            }
-        }
-        Box(
-            contentAlignment = Alignment.Center,
-            modifier = Modifier.Companion
-                .fillMaxSize()
-                .padding(32.dp)
-        ) {
-            Image(
-                painter = painterResource(id = android.R.drawable.star_on), // replace with your logo
-                contentDescription = "App Logo",
-                modifier = Modifier.Companion
-                    .size(128.dp)
-                    .scale(scaleAnimation.value)
-            )
-        }
-    }
 }
